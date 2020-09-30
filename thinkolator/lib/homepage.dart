@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'clipper/custom_shape_clipper.dart';
+import 'controls/custom_shape_clipper.dart';
+import 'controls/custom_dialog.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({key: Key, title: Title});
@@ -70,7 +71,15 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                     borderRadius: BorderRadius.all(Radius.circular(25.0)),
                     child: TextField(
                       controller: TextEditingController(),
-                      onSubmitted: (value) => {_showMaterialDialog(value)},
+                      onSubmitted: (value) => {
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertBox(
+                            value,
+                            errorType: 'error',
+                          ),
+                        )
+                      },
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         contentPadding:
@@ -119,22 +128,5 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
         ),
       ],
     );
-  }
-
-  _showMaterialDialog(value) {
-    showDialog(
-        context: context,
-        builder: (_) => new AlertDialog(
-              title: new Text("Message from Thinkolator"),
-              content: new Text('You entered: ' + value),
-              actions: <Widget>[
-                FlatButton(
-                  child: Text('Close me!'),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                )
-              ],
-            ));
   }
 }
