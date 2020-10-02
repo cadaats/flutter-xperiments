@@ -65,7 +65,7 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                         letterSpacing: 3.0)),
                 Padding(
                   padding: EdgeInsets.symmetric(
-                      horizontal: windowWidth * 0.25, vertical: 10.0),
+                      horizontal: windowWidth * 0.10, vertical: 10.0),
                   child: Material(
                     elevation: 5,
                     borderRadius: BorderRadius.all(Radius.circular(25.0)),
@@ -83,7 +83,7 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         contentPadding:
-                            EdgeInsets.symmetric(horizontal: 50, vertical: 13),
+                            EdgeInsets.symmetric(horizontal: 25, vertical: 13),
                         prefixIcon: Material(
                           borderRadius: BorderRadius.all(Radius.circular(30.0)),
                           child: Icon(Icons.search_rounded),

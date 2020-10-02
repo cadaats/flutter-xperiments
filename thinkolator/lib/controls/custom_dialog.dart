@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -77,17 +78,18 @@ class AlertBox extends StatelessWidget {
                   ],
                 ),
               ),
-              Positioned(
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: Colors.black,
-                  child: Icon(
-                    Icons.flaky,
-                    size: 40.0,
+              if (!kIsWeb)
+                Positioned(
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.black,
+                    child: Icon(
+                      Icons.flaky,
+                      size: 40.0,
+                    ),
                   ),
-                ),
-                top: -30,
-              )
+                  top: -30,
+                )
             ]));
   }
 }
