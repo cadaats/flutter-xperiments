@@ -38,6 +38,9 @@ class AlertBox extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
+                            SizedBox(
+                              width: 10,
+                            ),
                             Icon(
                               iconData,
                               size: 30,

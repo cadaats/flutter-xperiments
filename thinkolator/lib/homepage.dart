@@ -107,7 +107,7 @@ class _HomeScreenTopState extends State<HomeScreenTop> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     RaisedButton(
-                      color: Colors.transparent,
+                      color: Colors.transparent.withOpacity(0.10),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(100.0)),
                       elevation: 10.0,
